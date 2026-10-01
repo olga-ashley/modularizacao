@@ -4,11 +4,11 @@ def fat(valF):
         totalfat=valF*totalfat
         valF-=1
     return totalfat
-def divser(numA, numB):
+def divser(valN):
     totaldivser=1
     i=1
-    while i <= numA:
-        totaldivser=totaldivser+(1/eval(numB))
+    while i <= valN:
+        totaldivser=totaldivser+(1/fat(i))
         i+=1
     return totaldivser
 
@@ -20,7 +20,7 @@ def main():
     resAB= div(valA,valB)
 
     valN=int(input('Insira um valor N: '))
-    resN=divser(valN, 'fat(i)')
+    resN=divser(valN)
     print('O valor da série 1+1/1!+...+1/'+str(valN)+'! é de', str(resN)+'.')
     print(valA,'dividido por',valB,'é igual a', str(resAB)+'.')
 if(__name__=='__main__'):
